@@ -1,62 +1,167 @@
-.main__gallery__size{
-    padding: 5.56%;
+* {
+    font-family: 'Delius Unicase', serif;
+}
+
+body {
+    background: #4b4957;
+}
+
+.main__gallery__size {
+    padding: 8.33% 9.38%;
 }
 
 .gallery {
     display: grid;
-
-    grid-template-rows: 34%;
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
-
-    grid-gap: 2%;
-    margin-bottom: 5.56%;
+    gap: 30px;
+    margin-bottom: 6%;
 }
 
-.gallery-one{
+.gallery-one {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:"photo1 photo2 photo2"
-                        "photo3 photo3 photo4"
-                        "photo5 photo6 photo6";
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "photo1 photo2 photo2"
+        "photo3 photo3 photo4"
+        "photo5 photo6 photo6";
 }
 
-.gallery-two{
+.gallery-two {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:"photo7 photo8 photo8"
-                        "photo9 photo9 photo10"
-                        "photo9 photo9 photo10"
-                        "photo11 photo11 photo12";
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "photo7 photo8 photo8"
+        "photo9 photo9 photo10"
+        "photo9 photo9 photo10"
+        "photo11 photo11 photo12";
 }
 
-.gallery-three{
+.gallery-three {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:"photo7 photo2 photo2"
-                        "photo3 photo3 photo4"
-                        "photo5 photo6 photo6";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "photo13 photo14 photo15"
+        "photo16 photo14 photo17"
+        "photo18 photo19 photo17"
+        "photo18 photo20 photo20"
+        "photo21 photo21 photo22";
 }
 
 
 .architectura-photography__title,
 .still-life-hotography__title,
 .portrait-and-fashion-photography__title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4.2%;
-    font-family: 'Delius Unicase';
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
     font-weight: 400;
     font-size: 36px;
     line-height: 45px;
     text-align: center;
-    letter-spacing: 0.05em;
     color: #000000;
+    margin-bottom: 6%;
 }
 
 .photo {
-    border-radius: 30px;
-
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    cursor: pointer;
+    /* filter: blur(1px); */
 }
 
-.architectura-photography {
+
+/* Gallery Details Name */
+
+li {
+    position: relative;
+    text-align: left;
+}
+
+.gallery__details {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.gallery__details__name {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.gallery__details__date {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #E0E0E0;
+    z-index: 1;
+}
+
+
+
+.bg-blur {
+    position: absolute;
+    justify-content: space-between;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+    content: '';
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.bg-blur:hover {
+    background: none;
+}
+
+/* Buttons */
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    left: calc(50% - 20px/2 + 0px);
+    top: calc(50% - 20px/2);
+    background: rgba(224, 224, 224, 0.5);
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 5px;
+    border: 0px;
+}
+.button__like-counter, .button__dowload-image{
+    padding: 0;
+}
+
+.button__like-counter:hover, .button__dowload-image:hover {
+    transition: .5s all;
+    background-color: #FFFFFF;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.button-icon{
     margin: 0 auto;
 }
