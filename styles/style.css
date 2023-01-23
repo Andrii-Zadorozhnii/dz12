@@ -1,0 +1,62 @@
+.main__gallery__size{
+    padding: 5.56%;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-rows: 34%;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+
+    grid-gap: 2%;
+    margin-bottom: 5.56%;
+}
+
+.gallery-one{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"photo1 photo2 photo2"
+                        "photo3 photo3 photo4"
+                        "photo5 photo6 photo6";
+}
+
+.gallery-two{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"photo7 photo8 photo8"
+                        "photo9 photo9 photo10"
+                        "photo9 photo9 photo10"
+                        "photo11 photo11 photo12";
+}
+
+.gallery-three{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"photo7 photo2 photo2"
+                        "photo3 photo3 photo4"
+                        "photo5 photo6 photo6";
+}
+
+
+.architectura-photography__title,
+.still-life-hotography__title,
+.portrait-and-fashion-photography__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4.2%;
+    font-family: 'Delius Unicase';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+.photo {
+    border-radius: 30px;
+
+}
+
+.architectura-photography {
+    margin: 0 auto;
+}
